@@ -1,0 +1,28 @@
+{
+  "source": "Arbiscan Arbitrum One transaction page",
+  "url": "https://arbiscan.io/tx/0x7eb854a91808ba9a717ad4d2c4dd54e4eb99bf61d183378497fe969fed475c42",
+  "network": "Arbitrum One",
+  "chain_id": 42161,
+  "block": 212409708,
+  "timestamp_utc": "2024-05-18T04:28:54Z",
+  "captured_at_utc": "2026-10-19",
+  "capture_kind": "normalized excerpt transcribed from public page; not raw HTTP or RPC bytes",
+  "normalized_excerpt": {
+    "status": "Success",
+    "sender": "0xfAbc55b4155CC327DB70aEffEb7F32fF7fdd76c8",
+    "method": "claim(uint256 amount,bytes32[] merkleProof)",
+    "event": "AirdropRewardsClaim",
+    "event_user": "0xfAbc55b4155CC327DB70aEffEb7F32fF7fdd76c8",
+    "amount_wei": "10879202650000000000",
+    "text": "Arbitrum One transaction receipt. Status: Success. Function: claim(uint256 amount,bytes32[] merkleProof). Event: AirdropRewardsClaim(user=0xfAbc55b4155CC327DB70aEffEb7F32fF7fdd76c8, amount=10879202650000000000)."
+  },
+  "sha256_of_text_utf8": "d56d596c7d5311d1c01601f3c6244a71854b0d62221ee079a9004cff4ab12b35",
+  "expected_observation": "historical successful claim event exists and event user matches transaction sender",
+  "active_reward_eligibility": false,
+  "adversarial_class": "historical positive-shaped parser reference; not active eligibility evidence",
+  "limitations": [
+    "Third-party indexer rendered page, not a cryptographic receipt proof",
+    "Normalized excerpt is a test fixture, not a fresh source fetch",
+    "Official Arbitrum airdrop claims ended on 2023-09-24"
+  ]
+}
