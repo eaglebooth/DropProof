@@ -1,0 +1,7 @@
+{
+  "name": "dropproof-live-verification",
+  "private": true,
+  "type": "module",
+  "scripts": { "preflight": "node scripts/deployment-preflight.mjs" },
+  "devDependencies": { "genlayer-js": "1.1.8" }
+}

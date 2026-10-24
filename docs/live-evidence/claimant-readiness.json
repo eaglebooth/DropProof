@@ -1,0 +1,14 @@
+{
+  "checked_date": "2026-10-24",
+  "endpoint": "https://arb1.arbitrum.io/rpc",
+  "method": "eth_getTransactionCount",
+  "block_tag": "latest",
+  "results": [
+    {"address": "0xeb57bc7125fa60d7482CE12058397369AB3581f8", "result": "0x0"},
+    {"address": "0x2da5393d7BBb9A037dc3abB56DbbC5C150fc843f", "result": "0x0"},
+    {"address": "0xFeD97e2aE1A8C1983b7cA206B3545e6A2c685E43", "result": "0x0"},
+    {"address": "0xc67532aef9d2879cba9375a02e6217a3524657b8", "result": "0x0"}
+  ],
+  "scope": "These addresses have no sent Arbitrum transactions at this observation. This does not exclude incoming transfers, internal calls, or establish all forms of historical activity. No qualifying sender-bound transaction source has been identified for the two-claim payout regression.",
+  "transactions_sent": 0
+}

@@ -1,0 +1,210 @@
+{
+  "ctor": {
+    "params": [],
+    "kwparams": {}
+  },
+  "methods": {
+    "appeal_claim": {
+      "params": [
+        [
+          "claim_id",
+          "string"
+        ],
+        [
+          "evidence_urls_json",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "assess_claim": {
+      "params": [
+        [
+          "claim_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "close_campaign": {
+      "params": [
+        [
+          "campaign_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "create_campaign": {
+      "params": [
+        [
+          "title",
+          "string"
+        ],
+        [
+          "policy_text",
+          "string"
+        ],
+        [
+          "chain_id",
+          "int"
+        ],
+        [
+          "reward_per_claim",
+          "int"
+        ],
+        [
+          "max_awards",
+          "int"
+        ],
+        [
+          "deadline",
+          "int"
+        ],
+        [
+          "challenge_seconds",
+          "int"
+        ],
+        [
+          "target_urls_json",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": true
+    },
+    "finalize_rejection": {
+      "params": [
+        [
+          "claim_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "finalize_unresolved": {
+      "params": [
+        [
+          "claim_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "get_accounting": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_campaign": {
+      "params": [
+        [
+          "campaign_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_claim": {
+      "params": [
+        [
+          "claim_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_version": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "revise_unresolved_claim": {
+      "params": [
+        [
+          "claim_id",
+          "string"
+        ],
+        [
+          "evidence_urls_json",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "settle_claim": {
+      "params": [
+        [
+          "claim_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "submit_claim": {
+      "params": [
+        [
+          "campaign_id",
+          "string"
+        ],
+        [
+          "evidence_urls_json",
+          "string"
+        ],
+        [
+          "report_text",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    },
+    "submit_counterevidence": {
+      "params": [
+        [
+          "claim_id",
+          "string"
+        ],
+        [
+          "evidence_urls_json",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    }
+  }
+}

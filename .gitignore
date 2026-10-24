@@ -5,3 +5,6 @@ __pycache__/
 pytest-cache-files-*/
 artifacts/
 *.pyc
+node_modules/
+.env.*
+!.env.example

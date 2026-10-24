@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-10-24T05:06:14.053Z",
+  "contract": "0xDad00e9acADa9Cc379Fa943D1B564aF70331D3FB",
+  "chain_id": 61999,
+  "source_parity": {
+    "byte_for_byte": true,
+    "local_sha256": "2cf693775187837afcd3331cb0669767e0fe707669abbf8a07f52a57ddffb9cc",
+    "deployed_sha256": "2cf693775187837afcd3331cb0669767e0fe707669abbf8a07f52a57ddffb9cc",
+    "local_bytes": 32596,
+    "deployed_bytes": 32596
+  },
+  "version": {
+    "capacity_policy": "terminal-excess-approvals-v2",
+    "name": "DropProof",
+    "version": "0.3.0",
+    "workflow": "public-receipt-report-bounty-v3"
+  },
+  "accounting": {
+    "total_funded": "0",
+    "total_paid": "0",
+    "total_refunded": "0"
+  },
+  "campaign_zero": {
+    "error": "CAMPAIGN_NOT_FOUND"
+  }
+}

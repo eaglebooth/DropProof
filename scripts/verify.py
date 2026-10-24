@@ -23,7 +23,16 @@ missing = sorted(required - public_methods)
 if missing:
     raise SystemExit(f"Missing contract entrypoints: {', '.join(missing)}")
 
-raise SystemExit(subprocess.call([
+result = subprocess.call([
     sys.executable, "-m", "pytest", "-q", "--tb=short", "-p", "no:cacheprovider",
     str(ROOT / "tests"),
-], cwd=ROOT))
+], cwd=ROOT)
+if result:
+    raise SystemExit(result)
+for args in [
+    ["check", "contracts/drop_proof.py"],
+    ["schema", "contracts/drop_proof.py", "-o", "docs/schema.json"],
+]:
+    result = subprocess.call([sys.executable, "-X", "utf8", "-m", "genvm_linter.cli", *args], cwd=ROOT)
+    if result:
+        raise SystemExit(result)

@@ -1,0 +1,107 @@
+{
+  "checked_at": "2026-10-24T07:18:10.445590+00:00",
+  "source_sha256": "8a6aafddd21504682a1b31856333b92c4bb482656f4e5083bdea65c7a5f45f7a",
+  "scope": "Exact production RPC helpers in CPython with real Node HTTP transport; not GenVM/consensus/model/payout",
+  "url": "https://arbiscan.io/tx/0x7eb854a91808ba9a717ad4d2c4dd54e4eb99bf61d183378497fe969fed475c42",
+  "result": "FAIL",
+  "error": "RPC_UNAVAILABLE",
+  "calls": [
+    {
+      "endpoint": "https://arb1.arbitrum.io/rpc",
+      "request": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "method": "eth_chainId",
+        "params": []
+      },
+      "http_status": 200,
+      "response_utf8": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":\"0xa4b1\"}\n",
+      "response_sha256": "937de275b7fc223f33af3b5fdcef1c024e5cf8b2665ad8161096c7e6f9e1733d"
+    },
+    {
+      "endpoint": "https://arb1.arbitrum.io/rpc",
+      "request": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "method": "eth_getTransactionByHash",
+        "params": [
+          "0x7eb854a91808ba9a717ad4d2c4dd54e4eb99bf61d183378497fe969fed475c42"
+        ]
+      },
+      "http_status": 200,
+      "response_utf8": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"blockHash\":\"0x24162bdaefd87c398f6849178165d0f5d9f97059488eb23c2af25c608b7387b3\",\"blockNumber\":\"0xca91d6c\",\"blockTimestamp\":\"0x66482e86\",\"from\":\"0xfabc55b4155cc327db70aeffeb7f32ff7fdd76c8\",\"gas\":\"0x38014\",\"gasPrice\":\"0x989680\",\"maxFeePerGas\":\"0xcdfe60\",\"maxPriorityFeePerGas\":\"0x0\",\"hash\":\"0x7eb854a91808ba9a717ad4d2c4dd54e4eb99bf61d183378497fe969fed475c42\",\"input\":\"0x2f52ebb700000000000000000000000000000000000000000000000096fab12b70bd04000000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000dc878aeda860966d9d7098c02e0ac4f0995115a39ab6c5317028e50e415d96d97523a8c47f3d308806ed2dc2ac14d25d1d398d4b986b67e4402ae6d957a7316033474fa33c79172905bd8ec2459cd007bded214511ad1b83087db9239c606a6fd38226d5922e9201089926f664a495eb117a74f2aeaedee0c7f025816f254209d2ea9e49e3b87050cf24a1392b01b5b071b915d6becd75425e548bb4b42fd74f50f48b792746b16a0c431accf714d956a3936e8b11617a6f6b26f409840263ee8a1eb13452cf6950aabade4a817e1fbf867f3c0511d6d6708dd5a3f36735b079673ac5b3ecbfe0439eccdd79f5ebeae7e01fbd4a88ba5f5f095914921dfac78107dd64a2120eb892b6d744f60b8ea7f2477d33c4074975e8bb08ffc006dd0eb212f05ffba22ac436e56fb537eab56ad0a83a62792ab2a2df42f8a62137a31142b1c11057e333b94f319632d7f8d8186ec6b9061b4eaa6c5aa400f72d438fbb413aed644cc7630a286a0f6919fcf53db24cc8ad0134c0bceafe8432913d4dfde1409875bf8fd0603d49ec6e20be69693baccd47f09dd7d52c2ba58746dd6cf13ec\",\"nonce\":\"0x26\",\"to\":\"0x3b5ab6516c567f83c9835065608ee4e04703e421\",\"transactionIndex\":\"0x1\",\"value\":\"0x0\",\"type\":\"0x2\",\"accessList\":[],\"chainId\":\"0xa4b1\",\"v\":\"0x1\",\"r\":\"0x413cc1acfd359ad8b6efd678cd147d978ccb7b519cc620bdadc0e1f5ce4f86c9\",\"s\":\"0x38d08f30283e2ad9df15fe6f3169fe5b6013b815740a6dd8d40cb470192a141a\",\"yParity\":\"0x1\"}}\n",
+      "response_sha256": "485d3b68475d7a86c6ec47346ba4bfe8a7430b3685b6b6d45409975e852e4654"
+    },
+    {
+      "endpoint": "https://arb1.arbitrum.io/rpc",
+      "request": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "method": "eth_getTransactionReceipt",
+        "params": [
+          "0x7eb854a91808ba9a717ad4d2c4dd54e4eb99bf61d183378497fe969fed475c42"
+        ]
+      },
+      "http_status": 200,
+      "response_utf8": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"blockHash\":\"0x24162bdaefd87c398f6849178165d0f5d9f97059488eb23c2af25c608b7387b3\",\"blockNumber\":\"0xca91d6c\",\"contractAddress\":null,\"cumulativeGasUsed\":\"0x27de0\",\"effectiveGasPrice\":\"0x989680\",\"from\":\"0xfabc55b4155cc327db70aeffeb7f32ff7fdd76c8\",\"gasUsed\":\"0x27de0\",\"gasUsedForL1\":\"0xc120\",\"l1BlockNumber\":\"0x12f90b6\",\"logs\":[{\"address\":\"0x912ce59144191c1204e64559fe8253a0e49e6548\",\"topics\":[\"0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef\",\"0x0000000000000000000000003b5ab6516c567f83c9835065608ee4e04703e421\",\"0x000000000000000000000000fabc55b4155cc327db70aeffeb7f32ff7fdd76c8\"],\"data\":\"0x00000000000000000000000000000000000000000000000096fab12b70bd0400\",\"blockNumber\":\"0xca91d6c\",\"transactionHash\":\"0x7eb854a91808ba9a717ad4d2c4dd54e4eb99bf61d183378497fe969fed475c42\",\"transactionIndex\":\"0x1\",\"blockHash\":\"0x24162bdaefd87c398f6849178165d0f5d9f97059488eb23c2af25c608b7387b3\",\"blockTimestamp\":\"0x66482e86\",\"logIndex\":\"0x0\",\"removed\":false},{\"address\":\"0x3b5ab6516c567f83c9835065608ee4e04703e421\",\"topics\":[\"0x19552fadade1a47d8fa44f6487230cfff67275de6e68fbfba65171532768fd7d\",\"0x000000000000000000000000fabc55b4155cc327db70aeffeb7f32ff7fdd76c8\"],\"data\":\"0x00000000000000000000000000000000000000000000000096fab12b70bd0400\",\"blockNumber\":\"0xca91d6c\",\"transactionHash\":\"0x7eb854a91808ba9a717ad4d2c4dd54e4eb99bf61d183378497fe969fed475c42\",\"transactionIndex\":\"0x1\",\"blockHash\":\"0x24162bdaefd87c398f6849178165d0f5d9f97059488eb23c2af25c608b7387b3\",\"blockTimestamp\":\"0x66482e86\",\"logIndex\":\"0x1\",\"removed\":false}],\"logsBloom\":\"0x00000000000000000000000000000000000000000000000000000000001000000000000000000000000200000040000000000000000000000000000000000000000008000000000000000008000100000000000000000000000000000000000000000000000000000000000000000000000000000000400000000010000000000000000000000000000000000000000000000000000000000000000000000000400000000000000001000000000004000000000000000000010000000000000000000002000000000000000000000000000000000000000020002000000000000010000000000000000020000000000000000004000000000000000000000000\",\"status\":\"0x1\",\"to\":\"0x3b5ab6516c567f83c9835065608ee4e04703e421\",\"transactionHash\":\"0x7eb854a91808ba9a717ad4d2c4dd54e4eb99bf61d183378497fe969fed475c42\",\"transactionIndex\":\"0x1\",\"type\":\"0x2\"}}\n",
+      "response_sha256": "bb4e404276596c80ff46f077cfa1542f5b2f80ad26111d09235290b5b1196cd9"
+    },
+    {
+      "endpoint": "https://arb1.arbitrum.io/rpc",
+      "request": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "method": "eth_getBlockByNumber",
+        "params": [
+          "0xca91d6c",
+          false
+        ]
+      },
+      "http_status": 200,
+      "response_utf8": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"baseFeePerGas\":\"0x989680\",\"difficulty\":\"0x1\",\"extraData\":\"0x6ef6ce878efdac623d1c6be78cd106c08fcf2dca73fb1b9e434ef52ee4d4414a\",\"gasLimit\":\"0x4000000000000\",\"gasUsed\":\"0x13cc95\",\"hash\":\"0x24162bdaefd87c398f6849178165d0f5d9f97059488eb23c2af25c608b7387b3\",\"l1BlockNumber\":\"0x12f90b6\",\"logsBloom\":\"0x00000000000000100000000000000000000000000400000000000000001000000000000000000000000200000040000000004001000000001000002008000040002008010000000400000008000120400001000000000000002004000000000000000000020000000000000400000800000000000000400000000090000000000000000000000000000000000000000000000000000000080000000000000004400000000000a00001000000000004000000000000800000010000000001008000002002000000000000200000000000000000000000000020007000000020040010000000000000040020000220a04022000004040000000000802000000020\",\"miner\":\"0xa4b000000000000000000073657175656e636572\",\"mixHash\":\"0x000000000001d04b00000000012f90b600000000000000140000000000000000\",\"nonce\":\"0x0000000000172d75\",\"number\":\"0xca91d6c\",\"parentHash\":\"0xcd4e411ec3be14c332238addc9864473ccac11e9bc52e8847abb3e79545656d5\",\"receiptsRoot\":\"0x45d81f75970f2c0af6c5352a6ebc07c6f9f8e1bef95ad7ba6e5cf6bcfc990366\",\"sendCount\":\"0x1d04b\",\"sendRoot\":\"0x6ef6ce878efdac623d1c6be78cd106c08fcf2dca73fb1b9e434ef52ee4d4414a\",\"sha3Uncles\":\"0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347\",\"size\":\"0xdd2\",\"stateRoot\":\"0x4db67786099ad08bacb639c7ad235bae633172d0f762d4cf5a04f33e763e6bc9\",\"timestamp\":\"0x66482e86\",\"transactions\":[\"0x4a0810f9caef1af797bad9ab23f5fc2b5c0c504a348b885cc1c6bd0ce925406b\",\"0x7eb854a91808ba9a717ad4d2c4dd54e4eb99bf61d183378497fe969fed475c42\",\"0xfbcfe5259021b82fcaa8407cf130a264ca5e1a0a07a881edd9839becb29d622b\",\"0x986c13094dfa4ba633786979e984f8e88ba9465f447d7c21a9f609e78190bacf\",\"0x388858c2edd4c555329dbeeb64731c591f9d7f2ddf5935cf37525495480bf6ce\"],\"transactionsRoot\":\"0xdeb2fcfc588f3f0ca3489f8043ecf86b8d748a309cf4f9580c2b87321308771e\",\"uncles\":[]}}\n",
+      "response_sha256": "55e48115b7f158950deb0f4ca3a8e03a880c69fedc7307c8ee4f43afe20c9587"
+    },
+    {
+      "endpoint": "https://arb1.arbitrum.io/rpc",
+      "request": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "method": "eth_getBlockByNumber",
+        "params": [
+          "finalized",
+          false
+        ]
+      },
+      "http_status": 200,
+      "response_utf8": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":{\"baseFeePerGas\":\"0x1312d00\",\"difficulty\":\"0x1\",\"extraData\":\"0xd69cbdebe84b92ccfaca0454d354b23fc469f4f9c332647869739d2b334643d3\",\"gasLimit\":\"0x4000000000000\",\"gasUsed\":\"0x12d61e\",\"hash\":\"0x3508e4f954ba93efb78cedc0f3208549054e9b362266ea613a39e49ccb10d20e\",\"l1BlockNumber\":\"0x190b57e\",\"logsBloom\":\"0x0000020200000000000400000004002000000000088004000000008200008000000040480000820001000400000020001008000500100000000000102000210004004000000200002480900800204010002000408010100010000820000410002044000002410002800a800c00000908000010000002010000800010002408080404000400004608000000041000100108040098000008004002000001000040000000000000000000400000008900000200000000080004000002100000000000002002000010203000000040000000000010010008000004008100080024100004042000008402000000000000205040110000400800000110480020480080\",\"miner\":\"0xa4b000000000000000000073657175656e636572\",\"mixHash\":\"0x0000000000028d24000000000190b57e000000000000003d0001000000000000\",\"nonce\":\"0x000000000027b26a\",\"number\":\"0x1edc801f\",\"parentHash\":\"0x364ef1be49d26ceb8fda191a9b66a7121267e90f4490e8708b5c51ba0a4f4c10\",\"receiptsRoot\":\"0xa05794e7c892162ce9f77508721c22d2485ae73fa9825603c1378906488fc29d\",\"sendCount\":\"0x28d24\",\"sendRoot\":\"0xd69cbdebe84b92ccfaca0454d354b23fc469f4f9c332647869739d2b334643d3\",\"sha3Uncles\":\"0x1dcc4de8dec75d7aab85b567b6ccd41ad312451b948a7413f0a142fd40d49347\",\"size\":\"0xce7\",\"stateRoot\":\"0x87fdb02e1750be85f2bd962b3c2ffb6ca22a8aae5d797b5f2576fb475e7659ea\",\"timestamp\":\"0x6adc5747\",\"transactions\":[\"0x8da33a039066a01a5c8fdb66aeb04092a1905df19765067253940c4c8635087d\",\"0xcddeacf15d9ea1632e990c06d54bea095313dde0adc158ee77cbd126de6d3617\",\"0xe18423c6feb974a4fd1f9bd4e7c3409e0b602f6f001f76635e8c998f1bd87c22\",\"0x7881dddcec21f1e87f40daf2e8d36fe9c4ec032a59a4fcbcc24686bca6d5696e\"],\"transactionsRoot\":\"0x034b3447b83a0d30334ec004450d9dfb56f7f1cd519e281036ca71a937ecb5d4\",\"uncles\":[]}}\n",
+      "response_sha256": "0e547d1e5f620e4c421bc02b352c351e6ff1a768385b5ff10522221d246820bf"
+    },
+    {
+      "endpoint": "https://arbitrum-one-rpc.publicnode.com",
+      "request": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "method": "eth_chainId",
+        "params": []
+      },
+      "http_status": 200,
+      "response_utf8": "{\"jsonrpc\":\"2.0\",\"result\":\"0xa4b1\",\"id\":1}\n",
+      "response_sha256": "91a950147615d1e67791f1b5fbebdd8e2e76cfcf83d781717b534cfe4eab0d71"
+    },
+    {
+      "endpoint": "https://arbitrum-one-rpc.publicnode.com",
+      "request": {
+        "id": 1,
+        "jsonrpc": "2.0",
+        "method": "eth_getTransactionByHash",
+        "params": [
+          "0x7eb854a91808ba9a717ad4d2c4dd54e4eb99bf61d183378497fe969fed475c42"
+        ]
+      },
+      "http_status": 200,
+      "response_utf8": "{\"jsonrpc\":\"2.0\",\"id\":1,\"result\":null}\n",
+      "response_sha256": "d24b724805fc740a6fe78ed1233a0e4b48d2a3656c6dc63b48059f6eff20eaec"
+    }
+  ],
+  "transport_errors": []
+}

@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-10-24T07:29:35.774Z",
+  "contract": "0xc1B309a0F59AAa7F204CA20846f5F8129bE52ED7",
+  "chain_id": 61999,
+  "source_parity": {
+    "byte_for_byte": true,
+    "local_sha256": "6c9781e9cf0d142e450a22c59f195144385b1a0a95e5f3855df978dfe639a52b",
+    "deployed_sha256": "6c9781e9cf0d142e450a22c59f195144385b1a0a95e5f3855df978dfe639a52b",
+    "local_bytes": 39450,
+    "deployed_bytes": 39450
+  },
+  "version": {
+    "capacity_policy": "terminal-excess-approvals-v2",
+    "name": "DropProof",
+    "source_policy": "dual-rpc-finalized-receipts-v4",
+    "version": "0.4.0",
+    "workflow": "public-receipt-report-bounty-v3"
+  },
+  "accounting": {
+    "total_funded": "0",
+    "total_paid": "0",
+    "total_refunded": "0"
+  },
+  "campaign_zero": {
+    "error": "CAMPAIGN_NOT_FOUND"
+  }
+}

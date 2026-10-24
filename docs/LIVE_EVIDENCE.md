@@ -1,5 +1,76 @@
 # Live deployment and transaction evidence
 
+## v0.4.0 — RPC ingestion passed; actual challenge waiting
+
+Deployment: `0xc1B309a0F59AAa7F204CA20846f5F8129bE52ED7`.
+Exact source parity passed with SHA-256
+`6c9781e9cf0d142e450a22c59f195144385b1a0a95e5f3855df978dfe639a52b`.
+[Preflight](live-evidence/deployment-preflight-0xc1b309a0f59aaa7f204ca20846f5f8129be52ed7.json).
+
+The secondary sponsor funded campaign 0 with 1 wei. Two independent secondary
+reporters successfully submitted distinct reports concerning the selected public
+receipt. All three transactions finalized with MAJORITY_AGREE. Actual readbacks
+show both claims in CHALLENGE_WINDOW, not APPROVED or PAID. RPC snapshot ingestion
+therefore executed successfully in GenVM, not just in the local HTTP preflight.
+
+Assess both only after `2026-10-24T08:33:54Z` (15:33:54 UTC+7).
+No semantic verdict, native payout, excess-approved terminal path or closure is
+claimed for v0.4 until corresponding actual future transactions/readbacks exist.
+The 1 wei remains intentionally funded while these two claims are open.
+
+- Create: [transaction](https://explorer-studio.genlayer.com/transactions/0xccff5a1499f2629d43dbebf2dbfc4bcd0f1caad868d7d712384c6a6ac5c7b91e)
+- Report 1: [transaction](https://explorer-studio.genlayer.com/transactions/0xed7608c363534270cf908694a7ee0434abc9d995d7f5e38f694d95f3bf573e96)
+- Report 2: [transaction](https://explorer-studio.genlayer.com/transactions/0x667da4316dc5b263ebe18d04da314c7a191faa6e3ec7a91c16b0e923a82b2aae)
+- [Raw receipts, source archive and claim readbacks](live-evidence/bounty-0xc1b309a0f59aaa7f204ca20846f5f8129be52ed7.json)
+
+Continue after the real challenge expires, using the saved hashes/context:
+
+```powershell
+$env:DROP_PROOF_CONTRACT = '0xc1B309a0F59AAa7F204CA20846f5F8129bE52ED7'
+node scripts/live-bounty.mjs finish
+```
+
+## v0.3.0 actual attempt — 2026-10-24
+
+New deployment: `0xDad00e9acADa9Cc379Fa943D1B564aF70331D3FB`.
+Exact source parity passed with SHA-256
+`2cf693775187837afcd3331cb0669767e0fe707669abbf8a07f52a57ddffb9cc`.
+[Preflight](live-evidence/deployment-preflight-0xdad00e9acada9cc379fa943d1b564af70331d3fb.json).
+
+A secondary sponsor funded campaign 0 with 1 wei. The first secondary reporter
+submission finalized with MAJORITY_DISAGREE; the leader's capture eq_output was
+`{"items":[],"status":"UNAVAILABLE"}` and its public return was
+EVIDENCE_UNAVAILABLE_OR_NONDETERMINISTIC. The swallowed renderer exception does
+not establish the precise underlying network/renderer failure. Independent
+readback showed CLAIM_NOT_FOUND, open_claims=0 and no award paid. This did not
+reach actual semantic report adjudication.
+
+After campaign expiry the secondary sponsor closed it successfully. Readback:
+status CLOSED, remaining_pool=0, open_claims=0; total_funded=1, total_paid=0,
+total_refunded=1. The sponsor's 1 wei test pool is no longer held by the campaign.
+
+- Create: [transaction](https://explorer-studio.genlayer.com/transactions/0xbaecef41301df2b9d3530709e63c089ee5f98bfb8fedb8cd0d8808fcc559c7a2)
+- Failed source ingestion: [transaction](https://explorer-studio.genlayer.com/transactions/0x7d5e88fdd46cb4af77004ca29ec7f40c7ee8b5ffe1e3e1cbf0e94c0c5cdb11ca)
+- Close/refund: [transaction](https://explorer-studio.genlayer.com/transactions/0x328f015dc64398a4a70ed2052c646c25da7edaee02e2bbf6a912fd4536f171b7)
+- [Raw source RPC archive, receipts and readbacks](live-evidence/bounty-0xdad00e9acada9cc379fa943d1b564af70331d3fb.json)
+- [Transaction table](live-evidence/bounty-0xdad00e9acada9cc379fa943d1b564af70331d3fb.md)
+
+Status: **source parity, funding and empty-campaign refund observed; full report
+assessment/payout/excess-capacity regression BLOCKED by source ingestion.**
+The local 31 controlled tests are not live evidence for those missing branches.
+
+## Historical release notes below
+
+> The notes below concern older workflows. They do not prove the new report-bounty
+> path. See the v0.3.0 attempt above and [current specification](PUBLIC_RECEIPT_BOUNTY.md).
+
+> Historical workflow evidence below is for the original source only. The v0.2.0
+> correction is deployed at `0x927614FD79B204FCA90083EadBD5b494664b04cB` and has
+> passed [exact source preflight](live-evidence/deployment-preflight.json), but its
+> payout/excess-approval lifecycle is not yet verified live. See
+> [reviewer remediation](REVIEWER_REMEDIATION.md). Old source comparison and smoke
+> transactions below do not validate the new excess-approved-claim terminal path.
+
 Status: **StudioNet readback verified; live payable funding, invalid-evidence failure, and campaign-refund path verified. Claim adjudication/payout lifecycle remains untested live.**
 
 Read-only verification performed 2026-10-19 through the GenLayer CLI, configured

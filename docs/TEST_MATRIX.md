@@ -23,3 +23,12 @@ runner. These are direct-entrypoint unit tests in a fake GenLayer runtime. They 
 GenLayer, RPC, wallet, explorer, deployment, or real multi-validator E2E tests. The
 available evidence corpus has one genuine historical Arbiscan reference and no live
 campaign/proof of reward eligibility. See `TEST_RESOURCES.md`.
+# Current v0.3.0 scope
+
+The current workflow is a public-receipt report bounty; any personal receipt-owner
+assumptions in the older matrix above are superseded. Current regressions exercise
+selected-task URL binding, immutable report commitment, reporter/payee sender
+binding, unsupported/malformed/legacy verdicts, instruction-like report content,
+campaign-scoped report replay, independent reuse of public receipts, rejected-report
+non-censorship and excess approved-report termination. All are controlled-runtime
+tests, not live consensus. See [current specification](PUBLIC_RECEIPT_BOUNTY.md).
